@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.bullet { cursor: pointer; font: 10px sans-serif; }
+.bullet .marker { stroke: #000; stroke-width: 2px; }
+.bullet .tick line { stroke: #666; stroke-width: .5px; }
+.bullet .range.s0 { fill: #eee; }
+.bullet .range.s1 { fill: #ddd; }
+.bullet .range.s2 { fill: #ccc; }
+.bullet .measure.s0 { fill: lightsteelblue; }
+.bullet .measure.s1 { fill: steelblue; }
+.bullet .title { font-size: 14px; font-weight: bold; }
+.bullet .subtitle { fill: #999; }
+
+
+.bulletred { cursor: pointer; font: 10px sans-serif; }
+.bulletred .marker { stroke: #000; stroke-width: 2px; }
+.bulletred .tick line { stroke: black; stroke-width: .5px; }
+.bulletred .range.s0 { fill: indianred; }
+.bulletred .range.s1 { fill: indianred; }
+.bulletred .range.s2 { fill: indianred; }
+.bulletred .measure.s0 { fill:#AA0000; }
+.bulletred .measure.s1 { fill: #AA0000; }
+.bulletred .title { font-size: 14px; font-weight: bold; }
+.bulletred .subtitle { fill: indianred; }
+
+.bulletgreen { cursor: pointer; font: 10px sans-serif; }
+.bulletgreen .marker { stroke: #000; stroke-width: 2px; }
+.bulletgreen .tick line { stroke: black; stroke-width: .5px; }
+.bulletgreen .range.s0 { fill:  lightgreen; }
+.bulletgreen .range.s1 { fill: lightgreen; }
+.bulletgreen .range.s2 { fill: lightgreen; }
+.bulletgreen .measure.s0 { fill:#006000; }
+.bulletgreen .measure.s1 { fill: #006000; }
+.bulletgreen .title { font-size: 14px; font-weight: bold; }
+.bulletgreen .subtitle { fill: limegreen; }
+
+
+
+.node rect {
+  cursor: pointer;
+  fill: #fff;
+  fill-opacity: .5;
+  stroke: #3182bd;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+path.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
+}
+
+
+
+</style>
+<body bgcolor=black>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="bullet.js"></script>
+
+
+<script>
+
+var margin = {top: 30, right: 20, bottom: 30, left: 20},
+    width = 960 - margin.left - margin.right,
+	height = 50 - margin.top - margin.bottom,
+    barHeight = 25,
+    barWidth = width * .8;
+
+ 
+
+var chart = d3.bullet().width(barWidth).height(barHeight);
+
+var i = 0,
+    duration = 400,
+    root;
+
+var tree = d3.layout.tree()
+    .nodeSize([0, 20]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.json("indtree1.json", function(error, flare) {
+  if (error) throw error;
+
+  flare.x0 = 0;
+  flare.y0 = 0;
+  update(root = flare);
+});
+
+
+
+
+
+function update(source) {
+
+
+
+
+  // Compute the flattened node list. TODO use d3.layout.hierarchy.
+  var nodes = tree.nodes(root);
+
+  var height = Math.max(500, nodes.length * barHeight + margin.top + margin.bottom);
+
+  d3.select("svg").transition()
+      .duration(duration)
+      .attr("height", height);
+
+  d3.select(self.frameElement).transition()
+      .duration(duration)
+      .style("height", height + "px");
+
+  // Compute the "layout".
+  nodes.forEach(function(n, i) {
+    n.x = i * barHeight;
+  });
+
+  // Update the nodes�
+  var node = svg.selectAll("g.node")
+      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  var nodeEnter = node.enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+      .style("opacity", 1e-6);
+	  
+
+
+    // Enter any new nodes at the parent's previous position.
+
+  
+
+	  
+/*
+ nodeEnter.append("rect")
+      .attr("y", -barHeight / 2)
+      .attr("height", barHeight)
+      .attr("width", barWidth)
+      .style("fill", color)
+      .on("click", click);
+*/
+
+
+nodeEnter.append("svg")
+  .data([
+  {"title":"Revenue","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"red"},
+  {"title":"Revenue1","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"red"},
+  {"title":"Revenue2","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue3","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue4","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue5","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"red"},
+  {"title":"Revenue6","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"red"},
+  {"title":"Revenue7","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue8","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue9","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue10","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue11","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue12","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue13","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue14","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"grey"},
+  {"title":"Revenue15","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue16","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue17","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue18","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue19","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue20","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue21","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue22","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"grey"},
+  {"title":"Revenue23","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue24","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue25","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue26","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue27","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"},
+  {"title":"Revenue28","subtitle":"US$, in thousands","ranges":[150,225,300],"measures":[220,270],"markers":[250],"status":"green"}
+
+  ])
+   .attr("class", function(d){if(d.status=='red') {return "bulletred";} else if(d.status=='grey') {return "bullet";} else {return "bulletgreen";}})
+     .attr("y", -barHeight / 2)
+	 .attr("height", function(d) { return barHeight; })
+     .attr("width", function(d) { return barWidth; })
+	 .call(chart)
+  .on("click", click)
+
+nodeEnter.append("rect")
+      .attr("y", -barHeight / 2)
+      .attr("height", barHeight)
+      .attr("width", barWidth)
+     // .style("fill", color)
+      .on("click", click);
+
+
+
+
+
+
+  nodeEnter.append("text")
+      .attr("dy", 3.5)
+      .attr("dx", 5.5)
+      .text(function(d) { return d.name; });
+
+  // Transition nodes to their new position.
+  nodeEnter.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .style("opacity", 1);
+
+
+
+ 
+  node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .style("opacity", 1)
+    .select("rect")
+      .style("fill", color)
+
+
+  // Transition exiting nodes to the parent's new position.
+  node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+      .style("opacity", 1e-6)
+      .remove();
+
+  // Update the links�
+  var link = svg.selectAll("path.link")
+      .data(tree.links(nodes), function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      })
+    .transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+
+  
+}
+
+// Toggle children on click.
+function click(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  
+  update(d);
+}
+
+function color(d) {
+  return d._children ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
+}
+
+</script>

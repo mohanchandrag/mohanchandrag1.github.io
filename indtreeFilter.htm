@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+
+table {
+  cursor: pointer;
+  font: 10px sans-serif;
+   background-color: #B7DBFF;
+  fill-opacity: .5;
+  stroke-width: 1.5px;
+}
+.tableheader {font: 14px sans-serif;
+   background-color: #528ED6;
+   }
+
+#pageSizes
+{
+ width:75px;   
+}
+</style>
+
+
+
+
+
+<body>
+
+  <table border=1 class="rect" width=100%>
+  <tr><td colspan=2 rowspan=2 align=center width=35%><H1>FEED MONITORING TOOL</H1></td>
+	<td  align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='10%'>LOB</td>
+	<td  align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='10%'>Risk Type</td>
+	<td  align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='10%'>Source Systems</td>
+	<td  align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='10%'>Feed Systems</td>
+	<td  align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='10%'>Status</td>
+	<td  align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='10%'>Date</td>
+	<td rowspan=2  align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='10%'><input type=button value="Submit"></td>
+	
+  </tr>
+  <tr >
+	<td align=center>
+	<select id="pageSizes" name=group >
+	<option>All</option>
+	<option>LOB1</option>
+	<option>LOB2</option>
+	</select>
+	</td>
+	<td  align=center>
+	<select name=region>
+	<option>All</option>
+	<option>RiskType1</option>
+	<option>RiskType2</option>
+	</select>
+
+	</td>
+	<td  align=center>
+	<select name=flow>
+	<option>All</option>
+	<option>SourceSystem1</option>
+	<option>SourceSystem2</option>
+	</select>
+
+	</td>
+	<td  align=center>
+	<select name=flow>
+	<option>All</option>
+	<option>FeedSystem1</option>
+	<option>FeedSystem2</option>
+	</select>
+
+	</td>
+	<td  align=center>
+	<select name=status>
+	<option>All</option>
+	<option>Running</option>
+	<option>Failed</option>
+	<option>Delayed</option>
+	<option>Not Started</option>
+	</select>
+
+	</td>
+<td  align=center>
+<select name=status>
+	<option>01/23/2017</option>
+	<option>01/20/2017</option>
+	<option>01/19/2017</option>
+	<option>01/18/2017</option>
+	<option>01/17/2017</option>
+	</select>
+
+	</td>	
+  </tr>
+  </table>
+ </body>
+

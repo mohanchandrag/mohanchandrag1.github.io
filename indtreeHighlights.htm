@@ -1,0 +1,152 @@
+
+<html>
+<head>
+<title>STATS</title>
+<style>
+
+#myProgress {
+	position: relative;
+	width: 100%;
+	height: 15px;
+	background-color: #9D9D9D;
+}
+
+#myBar {
+	position: absolute;
+	width: 30%;
+	height: 100%;
+	background-color: #696969;
+}
+
+#label {
+	text-align: center;
+	line-height: 15px;
+	color: #000000;
+}
+</style>
+
+
+<script language='JavaScript'>
+function setDefaultValues()
+{
+	var divs = document.getElementsByTagName("div");
+	for(var i = 0; i < divs.length; i++)
+	{
+		var divName		= divs[i].id;
+		var imgPlus		= "imgPlus_"+divName;
+		var imgMinus	= "imgMinus_"+divName;
+
+		if(divName.indexOf("divAPP") != -1) {
+ContractBlock(divName,imgPlus,imgMinus);
+
+		} else {
+			if(divName.indexOf("divDEPT") != -1) {
+ExpandBlock(divName,imgPlus,imgMinus);
+
+			}
+		}
+	}
+}
+
+function OpenTubeMap(a1,a2,a3,a4,a5)
+{
+	var SECTOR_NAME_VALUE	= document.HOME_FORM.SECTOR_NAME.value
+	var LOB_NAME_VALUE		= document.HOME_FORM.LOB_NAME.value
+	var DEPT_NAME_VALUE		= document.HOME_FORM.DEPT_NAME.value
+	var DISPLAY_TYPE		= document.HOME_FORM.DISPLAY_TYPE.value
+	var CATEGORY_TYPE		= document.HOME_FORM.CATEGORY_TYPE.value
+
+	location.href	= "TubeMapProcessor.pl?LOB_NAME="+a1+"&APP_GROUP="+a2+"&APP_NAME="+a3+"&APP_FLOW="+a4+"&COB_DATE="+a5+"&SECTOR_NAME_VALUE="+SECTOR_NAME_VALUE+"&LOB_NAME_VALUE="+LOB_NAME_VALUE+"&DEPT_NAME_VALUE="+DEPT_NAME_VALUE+"&DISPLAY_TYPE="+DISPLAY_TYPE+"&CATEGORY_TYPE="+CATEGORY_TYPE;
+}
+
+function OpenAppContacts(a1,a2)
+{
+	window.open("http://pfsatool.nam.nsroot.net:7777/cgi-bin/PFSA/HOME_GlobalContactsAppSearch.pl?SRH_APP_GROUP="+a1+"&SRH_APP_ID="+a2);
+}
+
+function OpenAlertInfo(a1,a2)
+{
+
+}
+
+function OpenExecInfo(a1,a2)
+{
+
+}
+
+function OpenTopIssues(a1,a2)
+{
+
+}
+
+function ExpandBlock(divName,imgPlus,imgMinus)
+{
+	document.getElementById(divName).style.display		="block";
+
+	document.getElementById(imgPlus).style.display		="none";
+	document.getElementById(imgMinus).style.display		="block";
+}
+
+function ContractBlock(divName,imgPlus,imgMinus)
+{
+	document.getElementById(divName).style.display		="none";
+
+	document.getElementById(imgPlus).style.display		="block";
+	document.getElementById(imgMinus).style.display		="none";
+
+}
+
+</script>
+<script language='JavaScript'>
+	document.onkeypress = function (event) {
+		event = (event || window.event);
+		if (event.keyCode == 123) {
+			//alert('No F-12');
+			return false;
+		}
+	}
+	document.onmousedown = function (event) {
+		event = (event || window.event);
+		if (event.keyCode == 123) {
+			//alert('No F-keys');
+			return false;
+		}
+	}
+	document.onkeydown = function (event) {
+		event = (event || window.event);
+		if (event.keyCode == 123) {
+			//alert('No F-keys');
+			return false;
+		}
+	}
+</script>
+</head>
+
+<body onload='setDefaultValues();' action='' target='TargetFrame' method='post' >
+<form NAME='HOME_FORM' ACTION='' METHOD='post'>
+
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='15%' > SUCCESS</td>
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >FAILED</td>
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >RUNNING</td>
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >DELAYED</td>
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='15%'  >NOT STARTED</td>
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 12pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >ON ICE</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 14pt font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'> 32 </td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 14pt font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'> 0 </td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 14pt font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'> 3 </td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 14pt font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'> 1 </td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 14pt font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'> 4 </td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 14pt font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'> 0 </td>
+</tr>
+
+</table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+ "name": "--All-- ","size": 3938,"status":   "red",
+ "children": [
+	  {
+	   "name": "LOB1","size": 3938,"status":   "red",
+		   "children": [
+			    {
+			     "name": "SourceSystem1","size": 3938,"status":   "green",
+			     "children": [
+			      {"name": "FeedFile1", "size": 3938,"status":   "green"},
+			      {"name": "FeedFile2", "size": 3812,"status":   "green"}
+			     ]
+			    },
+			    {
+			     "name": "SourceSystem2","size": 3938,"status":   "red",
+			     "children": [
+			      {"name": "FeedFile1", "size": 3534,"status":   "red"},
+			      {"name": "FeedFile2", "size": 5731,"status":   "green"},
+			      {"name": "FeedFile3", "size": 7840,"status":   "green"},
+			      {"name": "FeedFile4", "size": 5914,"status":   "green"},
+			      {"name": "FeedFile5", "size": 3416,"status":   "green"}
+			     ]
+			    },
+			    {
+			     "name": "SourceSystem3","size": 3938,"status":   "green",
+			     "children": [
+				  {"name": "FeedFile1", "size": 7074,"status":   "green"},
+				  {"name": "FeedFile2", "size": 7074,"status":   "green"},
+				  {"name": "FeedFile3", "size": 7074,"status":   "green"}
+
+			     ]
+			   
+	  }]}
+
+		
+		   
+ ]
+}
+ 

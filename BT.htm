@@ -1,0 +1,1404 @@
+
+<html>
+<head>
+<title>DASHBOARD</title>
+<style>
+
+#myProgress {
+	position: relative;
+	width: 100%;
+	height: 15px;
+	background-color: #9D9D9D;
+}
+
+#myBar {
+	position: absolute;
+	width: 30%;
+	height: 100%;
+	background-color: #696969;
+}
+
+#label {
+	text-align: center;
+	line-height: 15px;
+	color: #000000;
+}
+</style>
+
+
+
+<body onload='setDefaultValues();' action='' target='TargetFrame' method='post' >
+<form NAME='HOME_FORM' ACTION='' METHOD='post'>
+<input type='hidden' name='COB_DATE' value="">
+<input type='hidden' name='SECTOR_NAME' value="">
+<input type='hidden' name='LOB_NAME' value="">
+<input type='hidden' name='DEPT_NAME' value="">
+<input type='hidden' name='DISPLAY_TYPE' value="APP-LEVEL">
+<input type='hidden' name='CATEGORY_TYPE' value="L">
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+
+
+<tr valign='center'>
+<td align='center' style='background: #003366; color: white; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 10pt; font-weight: bold; text-decoration: none text-align: center' width='100%' colspan='10'>
+<a href='#' onClick="OpenTubeMap('ICG - MSST','','','','')">
+
+</a>
+&nbsp; All LOBS</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='5%'  >&nbsp;</td>
+<td align='left' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp; SOURCESYSTEM / RISKTYPE</td>
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='20%' >SOURCE SYSTEM ID</td>
+
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='20%'  >FEED FILE NAME</td>
+<td align='center' style='background: #004993; color: #EDF2FA; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='25%' > PROGRESS</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divDEPT_CMOT','imgPlus_divDEPT_CMOT','imgMinus_divDEPT_CMOT')">
+
+</a>
+<a href='#' onClick="ContractBlock('divDEPT_CMOT','imgPlus_divDEPT_CMOT','imgMinus_divDEPT_CMOT')">
+
+</a>
+</td>
+<td align='left' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 9pt; font-weight: bold; text-decoration: none text-align: center' width='63%' colspan='5'>&nbsp; 
+<a href='#' onClick="OpenTubeMap('','CMOT','','','')">
+
+</a>
+&nbsp; LOB NAME</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='23%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='12%'>&nbsp;</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divDEPT_CMOT' name='divDEPT_CMOT' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_VOLCKER AGGREGATOR - (164758)','imgPlus_divAPP_VOLCKER AGGREGATOR - (164758)','imgMinus_divAPP_VOLCKER AGGREGATOR - (164758)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_VOLCKER AGGREGATOR - (164758)','imgPlus_divAPP_VOLCKER AGGREGATOR - (164758)','imgMinus_divAPP_VOLCKER AGGREGATOR - (164758)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_VOLCKER AGGREGATOR - (164758)' name='divAPP_VOLCKER AGGREGATOR - (164758)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','VOLCKER AGGREGATOR','VOLCKER_EOD','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divDEPT_COMMODITIES','imgPlus_divDEPT_COMMODITIES','imgMinus_divDEPT_COMMODITIES')">
+
+</a>
+<a href='#' onClick="ContractBlock('divDEPT_COMMODITIES','imgPlus_divDEPT_COMMODITIES','imgMinus_divDEPT_COMMODITIES')">
+
+</a>
+</td>
+<td align='left' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 9pt; font-weight: bold; text-decoration: none text-align: center' width='63%' colspan='5'>&nbsp; 
+<a href='#' onClick="OpenTubeMap('','COMMODITIES','','','')">
+
+</a>
+&nbsp; LOB NAME</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='23%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='12%'>&nbsp;</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divDEPT_COMMODITIES' name='divDEPT_COMMODITIES' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_CITIEXOTICS - (159448)','imgPlus_divAPP_CITIEXOTICS - (159448)','imgMinus_divAPP_CITIEXOTICS - (159448)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_CITIEXOTICS - (159448)','imgPlus_divAPP_CITIEXOTICS - (159448)','imgMinus_divAPP_CITIEXOTICS - (159448)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:4%; background-color:#4CAF50">
+<div id="label">4%</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_CITIEXOTICS - (159448)' name='divAPP_CITIEXOTICS - (159448)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','CITIEXOTICS','EXOTICS_EOD','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:4%; background-color:#4CAF50">
+<div id="label">4%</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_OPENLINK V12 - (149589)','imgPlus_divAPP_OPENLINK V12 - (149589)','imgMinus_divAPP_OPENLINK V12 - (149589)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_OPENLINK V12 - (149589)','imgPlus_divAPP_OPENLINK V12 - (149589)','imgMinus_divAPP_OPENLINK V12 - (149589)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:1%; background-color:#4CAF50">
+<div id="label">1%</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_OPENLINK V12 - (149589)' name='divAPP_OPENLINK V12 - (149589)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','OPENLINK V12','OPENLINK_CGML','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','OPENLINK V12','OPENLINK_NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:1%; background-color:#4CAF50">
+<div id="label">11%</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divDEPT_CREDIT','imgPlus_divDEPT_CREDIT','imgMinus_divDEPT_CREDIT')">
+
+</a>
+<a href='#' onClick="ContractBlock('divDEPT_CREDIT','imgPlus_divDEPT_CREDIT','imgMinus_divDEPT_CREDIT')">
+
+</a>
+</td>
+<td align='left' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 9pt; font-weight: bold; text-decoration: none text-align: center' width='63%' colspan='5'>&nbsp; 
+<a href='#' onClick="OpenTubeMap('','CREDIT','','','')">
+
+</a>
+&nbsp; LOB NAME</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='23%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='12%'>&nbsp;</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divDEPT_CREDIT' name='divDEPT_CREDIT' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_MIDAS - (158406)','imgPlus_divAPP_MIDAS - (158406)','imgMinus_divAPP_MIDAS - (158406)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_MIDAS - (158406)','imgPlus_divAPP_MIDAS - (158406)','imgMinus_divAPP_MIDAS - (158406)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:86%; background-color:#4CAF50">
+<div id="label">86%</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_MIDAS - (158406)' name='divAPP_MIDAS - (158406)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','MIDAS','MIDAS-APAC','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:86%; background-color:#4CAF50">
+<div id="label">86%</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divDEPT_EQUITIES','imgPlus_divDEPT_EQUITIES','imgMinus_divDEPT_EQUITIES')">
+
+</a>
+<a href='#' onClick="ContractBlock('divDEPT_EQUITIES','imgPlus_divDEPT_EQUITIES','imgMinus_divDEPT_EQUITIES')">
+
+</a>
+</td>
+<td align='left' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 9pt; font-weight: bold; text-decoration: none text-align: center' width='63%' colspan='5'>&nbsp; 
+<a href='#' onClick="OpenTubeMap('','EQUITIES','','','')">
+
+</a>
+&nbsp; LOB NAME</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='23%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='12%'>&nbsp;</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divDEPT_EQUITIES' name='divDEPT_EQUITIES' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_ASIA PACIFIC EQRMS SYSTEMS - (150494)','imgPlus_divAPP_ASIA PACIFIC EQRMS SYSTEMS - (150494)','imgMinus_divAPP_ASIA PACIFIC EQRMS SYSTEMS - (150494)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_ASIA PACIFIC EQRMS SYSTEMS - (150494)','imgPlus_divAPP_ASIA PACIFIC EQRMS SYSTEMS - (150494)','imgMinus_divAPP_ASIA PACIFIC EQRMS SYSTEMS - (150494)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#FFD89D">
+<div id="myBar" style="width:53%; background-color:#FF9900">
+<div id="label">53%</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_ASIA PACIFIC EQRMS SYSTEMS - (150494)' name='divAPP_ASIA PACIFIC EQRMS SYSTEMS - (150494)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','ASIA PACIFIC EQRMS SYSTEMS','EQRMS_APAC','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#FFD89D">
+<div id="myBar" style="width:53%; background-color:#FF9900">
+<div id="label">53%</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_EQRMS SYSTEMS - LONDON - (4961)','imgPlus_divAPP_EQRMS SYSTEMS - LONDON - (4961)','imgMinus_divAPP_EQRMS SYSTEMS - LONDON - (4961)')">
+
+</a>
+<a href='#'>
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_EQRMS SYSTEMS - LONDON - (4961)' name='divAPP_EQRMS SYSTEMS - LONDON - (4961)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','EQRMS SYSTEMS - LONDON','EQRMS_EMEA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_EQRMS SYSTEMS - NY - (150744)','imgPlus_divAPP_EQRMS SYSTEMS - NY - (150744)','imgMinus_divAPP_EQRMS SYSTEMS - NY - (150744)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_EQRMS SYSTEMS - NY - (150744)','imgPlus_divAPP_EQRMS SYSTEMS - NY - (150744)','imgMinus_divAPP_EQRMS SYSTEMS - NY - (150744)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_EQRMS SYSTEMS - NY - (150744)' name='divAPP_EQRMS SYSTEMS - NY - (150744)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','EQRMS SYSTEMS - NY','EQRMS_NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_PRIME SWAP - (156752)','imgPlus_divAPP_PRIME SWAP - (156752)','imgMinus_divAPP_PRIME SWAP - (156752)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_PRIME SWAP - (156752)','imgPlus_divAPP_PRIME SWAP - (156752)','imgMinus_divAPP_PRIME SWAP - (156752)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#FFDFDF">
+<div id="myBar" style="width:20%; background-color:#F00000">
+<div id="label">20%</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_PRIME SWAP - (156752)' name='divAPP_PRIME SWAP - (156752)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','PRIME SWAP','PFS_APAC','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#FFDFDF">
+<div id="myBar" style="width:50%; background-color:#F00000">
+<div id="label">50%</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','PRIME SWAP','PFS_NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divDEPT_PRIME-FINANCE','imgPlus_divDEPT_PRIME-FINANCE','imgMinus_divDEPT_PRIME-FINANCE')">
+
+</a>
+<a href='#' onClick="ContractBlock('divDEPT_PRIME-FINANCE','imgPlus_divDEPT_PRIME-FINANCE','imgMinus_divDEPT_PRIME-FINANCE')">
+
+</a>
+</td>
+<td align='left' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 9pt; font-weight: bold; text-decoration: none text-align: center' width='63%' colspan='5'>&nbsp; 
+<a href='#' onClick="OpenTubeMap('','PRIME-FINANCE','','','')">
+
+</a>
+&nbsp; LOB NAME</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='23%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='12%'>&nbsp;</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divDEPT_PRIME-FINANCE' name='divDEPT_PRIME-FINANCE' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_GLOBAL PRIME - (160164)','imgPlus_divAPP_GLOBAL PRIME - (160164)','imgMinus_divAPP_GLOBAL PRIME - (160164)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_GLOBAL PRIME - (160164)','imgPlus_divAPP_GLOBAL PRIME - (160164)','imgMinus_divAPP_GLOBAL PRIME - (160164)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>160164</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:34%; background-color:#4CAF50">
+<div id="label">34%</div>
+</div>
+</div>
+</td>
+
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_GLOBAL PRIME - (160164)' name='divAPP_GLOBAL PRIME - (160164)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','GLOBAL PRIME','GP_APAC','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:100%; background-color:#4CAF50">
+<div id="label">COMPLETED</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','GLOBAL PRIME','GP_EMEA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','GLOBAL PRIME','GP_NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_PF FINANCE ENGINE - (162641)','imgPlus_divAPP_PF FINANCE ENGINE - (162641)','imgMinus_divAPP_PF FINANCE ENGINE - (162641)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_PF FINANCE ENGINE - (162641)','imgPlus_divAPP_PF FINANCE ENGINE - (162641)','imgMinus_divAPP_PF FINANCE ENGINE - (162641)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_PF FINANCE ENGINE - (162641)' name='divAPP_PF FINANCE ENGINE - (162641)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','PF FINANCE ENGINE','FE_EMEA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','PF FINANCE ENGINE','FE_NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_PF REF DATA - (162821)','imgPlus_divAPP_PF REF DATA - (162821)','imgMinus_divAPP_PF REF DATA - (162821)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_PF REF DATA - (162821)','imgPlus_divAPP_PF REF DATA - (162821)','imgMinus_divAPP_PF REF DATA - (162821)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:2%; background-color:#4CAF50">
+<div id="label">2%</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_PF REF DATA - (162821)' name='divAPP_PF REF DATA - (162821)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','PF REF DATA','REF-APAC','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:100%; background-color:#4CAF50">
+<div id="label">COMPLETED</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','PF REF DATA','REF-EMEA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','PF REF DATA','REF-NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_PRIME PLUS - (11931)','imgPlus_divAPP_PRIME PLUS - (11931)','imgMinus_divAPP_PRIME PLUS - (11931)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_PRIME PLUS - (11931)','imgPlus_divAPP_PRIME PLUS - (11931)','imgMinus_divAPP_PRIME PLUS - (11931)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:1%; background-color:#4CAF50">
+<div id="label">1%</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_PRIME PLUS - (11931)' name='divAPP_PRIME PLUS - (11931)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','PRIME PLUS','FIPB-EOD','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:1%; background-color:#4CAF50">
+<div id="label">1%</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divDEPT_RATES','imgPlus_divDEPT_RATES','imgMinus_divDEPT_RATES')">
+
+</a>
+<a href='#' onClick="ContractBlock('divDEPT_RATES','imgPlus_divDEPT_RATES','imgMinus_divDEPT_RATES')">
+
+</a>
+</td>
+<td align='left' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 9pt; font-weight: bold; text-decoration: none text-align: center' width='63%' colspan='5'>&nbsp; 
+<a href='#' onClick="OpenTubeMap('','RATES','','','')">
+
+</a>
+&nbsp; LOB NAME</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='23%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='12%'>&nbsp;</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divDEPT_RATES' name='divDEPT_RATES' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_MARGIN CALCULATION SERVICES - (162956)','imgPlus_divAPP_MARGIN CALCULATION SERVICES - (162956)','imgMinus_divAPP_MARGIN CALCULATION SERVICES - (162956)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_MARGIN CALCULATION SERVICES - (162956)','imgPlus_divAPP_MARGIN CALCULATION SERVICES - (162956)','imgMinus_divAPP_MARGIN CALCULATION SERVICES - (162956)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:24%; background-color:#4CAF50">
+<div id="label">24%</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_MARGIN CALCULATION SERVICES - (162956)' name='divAPP_MARGIN CALCULATION SERVICES - (162956)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' onClick="OpenTubeMap('','','MARGIN CALCULATION SERVICES','MCS-APAC','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:64%; background-color:#4CAF50">
+<div id="label">64%</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','MARGIN CALCULATION SERVICES','MCS-EMEA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:3%; background-color:#4CAF50">
+<div id="label">3%</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','MARGIN CALCULATION SERVICES','MCS-NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_OPICS - (33561)','imgPlus_divAPP_OPICS - (33561)','imgMinus_divAPP_OPICS - (33561)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_OPICS - (33561)','imgPlus_divAPP_OPICS - (33561)','imgMinus_divAPP_OPICS - (33561)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_OPICS - (33561)' name='divAPP_OPICS - (33561)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','OPICS','OPICS_CA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','OPICS','OPICS_NY','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+<tr valign='center'>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divDEPT_PRIME-FINANCE','imgPlus_divDEPT_PRIME-FINANCE','imgMinus_divDEPT_PRIME-FINANCE')">
+
+</a>
+<a href='#' onClick="ContractBlock('divDEPT_PRIME-FINANCE','imgPlus_divDEPT_PRIME-FINANCE','imgMinus_divDEPT_PRIME-FINANCE')">
+
+</a>
+</td>
+<td align='left' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 9pt; font-weight: bold; text-decoration: none text-align: center' width='63%' colspan='5'>&nbsp; 
+<a href='#' ('','PRIME-FINANCE','','','')">
+
+</a>
+&nbsp; LOB NAME</td>
+<td align='center' style='background: #4D4D4D; color: #FFFFFF; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='23%' colspan='3'>&nbsp;</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divDEPT_PRIME-FINANCE' name='divDEPT_PRIME-FINANCE' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_GLOBAL PRIME - (160164)','imgPlus_divAPP_GLOBAL PRIME - (160164)','imgMinus_divAPP_GLOBAL PRIME - (160164)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_GLOBAL PRIME - (160164)','imgPlus_divAPP_GLOBAL PRIME - (160164)','imgMinus_divAPP_GLOBAL PRIME - (160164)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:34%; background-color:#4CAF50">
+<div id="label">34%</div>
+</div>
+</div>
+</td>
+
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_GLOBAL PRIME - (160164)' name='divAPP_GLOBAL PRIME - (160164)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','GLOBAL PRIME','GP_APAC','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:100%; background-color:#4CAF50">
+<div id="label">COMPLETED</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','GLOBAL PRIME','GP_EMEA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','GLOBAL PRIME','GP_NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_PF FINANCE ENGINE - (162641)','imgPlus_divAPP_PF FINANCE ENGINE - (162641)','imgMinus_divAPP_PF FINANCE ENGINE - (162641)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_PF FINANCE ENGINE - (162641)','imgPlus_divAPP_PF FINANCE ENGINE - (162641)','imgMinus_divAPP_PF FINANCE ENGINE - (162641)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_PF FINANCE ENGINE - (162641)' name='divAPP_PF FINANCE ENGINE - (162641)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','PF FINANCE ENGINE','FE_EMEA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','PF FINANCE ENGINE','FE_NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_PF REF DATA - (162821)','imgPlus_divAPP_PF REF DATA - (162821)','imgMinus_divAPP_PF REF DATA - (162821)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_PF REF DATA - (162821)','imgPlus_divAPP_PF REF DATA - (162821)','imgMinus_divAPP_PF REF DATA - (162821)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:2%; background-color:#4CAF50">
+<div id="label">2%</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_PF REF DATA - (162821)' name='divAPP_PF REF DATA - (162821)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','PF REF DATA','REF-APAC','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:100%; background-color:#4CAF50">
+<div id="label">COMPLETED</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','PF REF DATA','REF-EMEA','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','PF REF DATA','REF-NAM','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#C3C3C3">
+<div id="myBar" style="width:100%; background-color:#C3C3C3">
+<div id="label">NOT RUNNING</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='2%' colspan='1'>
+<a href='#' onClick="ExpandBlock('divAPP_PRIME PLUS - (11931)','imgPlus_divAPP_PRIME PLUS - (11931)','imgMinus_divAPP_PRIME PLUS - (11931)')">
+
+</a>
+<a href='#' onClick="ContractBlock('divAPP_PRIME PLUS - (11931)','imgPlus_divAPP_PRIME PLUS - (11931)','imgMinus_divAPP_PRIME PLUS - (11931)')">
+
+</a>
+</td>
+<td align='left' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='30%' >&nbsp;
+&nbsp; SOURCESYSTEM</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'>12345</td>
+<td align='center' style='background: #E9E9E9; color: #000000; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='26%' colspan='3'>&nbsp;</td>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:1%; background-color:#4CAF50">
+<div id="label">1%</div>
+</div>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' width='100%' colspan='10'>
+<div id='divAPP_PRIME PLUS - (11931)' name='divAPP_PRIME PLUS - (11931)' >
+<table width='100%' border='0' cellpadding='0' cellspacing='1' bordercolor='#FFFFFF'>
+<tr valign='center'>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='39%' colspan='3'>&nbsp;</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='7%' colspan='1'></td>
+<td align='left' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >&nbsp; 
+<a href='#' ('','','PRIME PLUS','FIPB-EOD','')">
+
+</a>
+&nbsp; FEEDFILE</td>
+<td align='center' style='background: #CDDCF1; color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='4%'>
+
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='15%' >
+<div id="myProgress" style="background-color:#B9E1BB">
+<div id="myBar" style="width:1%; background-color:#4CAF50">
+<div id="label">1%</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+
+
+
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign='center'>
+<td align='center' style='color: #003366; font-family: Calibri, Helvetica, overflow: hidden; sans-serif; font-size: 8pt; font-weight: bold; text-decoration: none text-align: center' width='100%' colspan='10'>&nbsp;</td>
+</tr>
+</table>
+
+</form>
+</body>
+</html>
